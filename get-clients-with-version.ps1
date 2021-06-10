@@ -4,6 +4,6 @@ foreach ($client in $clientJson) {
   $address=$client.inst.split(':')[1]
   $clienthostname=$client.client_metadata.hostname
   if ($client.client_metadata.ceph_version) {$version=$client.client_metadata.ceph_version.split(' ')[2]}
-  else { $version='not reported' }
-  "$id,$address,$clienthostname,$version" 
+  else { $version='BLANK' }
+  "$clienthostname,$address,$id,$version" 
 }
