@@ -13,4 +13,4 @@ foreach ($client in $clientJson) {
     version=$version
    }
 }
-$clients|select -unique hostname,address,version
+$clients|select -unique hostname,address,version | sort-object
